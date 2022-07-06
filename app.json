@@ -12,12 +12,10 @@
         "bot_token":{
             "description":"Telegram bot token",
             "required":"True"
-            "value":"5445622482:AAGHe-S1W43u1ey-wSem_RWxobS4as638xw"
         },
         "api_key":{
             "description":"Api key from plantnet.org",
             "required":"True"
-            "value":"2b107UPxwsW32Mc7gHtutNVEEe"
         }
     }
 
