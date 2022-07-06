@@ -20,7 +20,7 @@ def start(update,context):
 	name=update.message.chat.first_name
 	update.message.reply_text("Hi! "+name+"\nWelcome to Plant Identifier Bot, Send a clear image of a plant and i will try to recognise the plant in it")
     
-keyboard=[[InlineKeyboardButton("➕Add Image ➕", callback_data="add"), InlineKeyboardButton ("🔍 Identify 🔍",callback_data="process")]]
+keyboard=[[InlineKeyboardButton("💞 add IMagE", callback_data="add"), InlineKeyboardButton ("🔍 Identify",callback_data="process")]]
 reply_markup = InlineKeyboardMarkup(keyboard)
 keyboard1=[[InlineKeyboardButton("Flower",callback_data='flower'),InlineKeyboardButton("Leaf",callback_data='leaf'),InlineKeyboardButton("Fruit",callback_data='fruit'),InlineKeyboardButton("Bark",callback_data='bark')]]
 reply_markup1=InlineKeyboardMarkup(keyboard1)
@@ -74,7 +74,7 @@ def button(update,context):
                     url=a.url
                 except Exception:
                     url="<i>Not Found</i>"
-                message=f"<b>Plant Name : </b>{name}\n\n<b>Probability : </b>{probability*100}\n\n<b>Scientific name : </b>{scientific_name}\n\n<b>Common Names : </b>{common}\n\n<b>Wikipedia Page : </b>{url}"
+                message=f"@MutyalaHarshith <b>Plant Name : </b>{name}\n\n<b>Probability : </b>{probability*100}\n\n<b>Scientific name : </b>{scientific_name}\n\n<b>Common Names : </b>{common}\n\n<b>Wikipedia Page : </b>{url}"
                 query.edit_message_text(message,parse_mode=telegram.ParseMode.HTML)
                 fileid.clear()
                 images.clear()
